@@ -1,4 +1,5 @@
-__pycache__/
+# hides all pycache no matter where they are
+*__pycache__/
 
 
 config.py
