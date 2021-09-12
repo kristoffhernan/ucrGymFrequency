@@ -3,6 +3,7 @@
 from requests_html import HTMLSession
 
 def get_page():
+    # need header for HTTP requests, not always needed?
     HEADER = { 
             'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36',
         }
@@ -15,22 +16,27 @@ def get_page():
 
 def get_text():
     r = get_page()
+    # need to render because of java
     r.html.render()
 
     container = r.html.find('.panel-body')
     locations = container[0].find('.col-md-3')
     return locations
 
-def clean_data():
+def gym_data():
     ls = []
     locations = get_text()
+    indexes = [0,3,4]
 
-    for i in range(0,15):
+    for i in range(0,32):
         location = locations[i].text
         location = location.replace('Last Count: ', '').replace('Updated: ', '').replace('(', '').replace(')', '').replace('%', '')
-        
-        if "NA" not in location:
-            location = list(location.split("\n"))
-            ls.append(location)
+        location = list(location.split("\n"))
 
+        if "Closed" not in location:
+            ls.append(location)
+        else:
+            for index in indexes:
+                location[index] = None
+            ls.append(location)
     return ls
