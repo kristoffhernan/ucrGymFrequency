@@ -2,9 +2,6 @@
 import requests
 from config import API_KEY
 
-#from datetime import date
-# import current date time for the future
-
 def get_full_url(API_KEY):
     BASE_URL = "https://api.openweathermap.org/data/2.5/weather?q="
     CITY = "riverside,"
@@ -17,7 +14,7 @@ def get_full_url(API_KEY):
 def get_main_dict():
     URL = get_full_url(API_KEY)
     response = requests.get(URL)
-    data = response.json()
+    data = response.json() # data is in json format, need .json to read
 
     return data
 
