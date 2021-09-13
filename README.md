@@ -40,4 +40,5 @@ To get the date and time, I will be using the datetime library. For now, the tim
 I am planning to run this script for either 2 months or the full Fall 2021-2022 quarter at UCR. The script will be ran every hour unless I see the website being update more often. Even though I will be graduating this Fall, I would still like to perform the analysis on the dataset.
 
 Thank you for reading. Any questions or if you're hiring, my email is below. 
+<br>
 email: khern045@ucr.edu
