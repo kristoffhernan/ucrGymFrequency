@@ -27,7 +27,7 @@ There are a few issues I'm worried about for the data I'm scraping.
 	a. Because the data is updated every 1-3 hours, it would be difficult to tell how often someone stays in a certain area before leaving. 
 	
 2. I don't know how the students are tracked or if the count of students is tracked accurately.
-3. Fall 2021-2022 gym hours are completely different than in the past before COVID. If the hours go back to the original hours where it's open from 6:00 AM - 12:00 AM and open on the weekends as well, I don't thing the models would work as well because I'd be extrapolating. 
+3. Fall 2021-2022 gym hours are completely different than in the past before COVID. If the hours go back to the original hours where it's open from 6:00 AM - 12:00 AM and open on the weekends as well, I don't think the models would work as well because I'd be extrapolating. 
 
 
 ## [Weather](https://github.com/kristoffhernan/ucrGymFrequency/tree/main/weather)
